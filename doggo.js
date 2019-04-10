@@ -1,20 +1,28 @@
 const userAction = async () => {
     const response = await fetch('https://random.dog/woof.json');
         const myJson = await response.json();
-        console.log(myJson)
-
+    return myJson.url
 };
 
 
 function button () {
-    document.getElementById('btn').onclick = function () {
-        let src = userAction(),
+    document.getElementById('btn').onclick = async function () {
+        const src = await userAction(),
             img = document.createElement('img');
-
         img.src = src;
         document.body.appendChild(img);
     };
 }
+
+// function button () {
+//     document.getElementById('btn').onclick = function () {
+//         let src = userAction(),
+//             img = document.createElement('img');
+//         console.log(src);
+//         img.src = src;
+//         document.body.appendChild(img);
+//     };
+// }
 
 
 // let request = new XMLHttpRequest();
