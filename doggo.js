@@ -1,15 +1,19 @@
 const userAction = async () => {
     const response = await fetch('https://random.dog/woof.json');
-        const myJson = await response.json();
+    const myJson = await response.json();
     return myJson.url
 };
 
 
-function button () {
+function button() {
     document.getElementById('btn').onclick = async function () {
         const src = await userAction(),
             img = document.createElement('img');
         img.src = src;
+        img.width = 500;
+        img.height = 500;
+        img.alt = "doggo";
+        img.id = 'doggo_image';
         document.body.appendChild(img);
     };
 }
