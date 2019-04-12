@@ -14,7 +14,13 @@ function button() {
         img.height = 500;
         img.alt = "doggo";
         img.id = 'doggo_image';
-        document.body.appendChild(img);
+
+        const current_image = document.getElementById(img.id);
+        if (current_image) {
+            document.body.replaceChild(img, current_image);
+        } else {
+            document.body.appendChild(img);
+        }
     };
 }
 
