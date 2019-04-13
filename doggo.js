@@ -19,6 +19,7 @@ function button() {
         // Need to figure this part out
         if (pieces[pieces.length-1] === "mp4" || pieces[pieces.length-1] === "webM") {
             let video = document.createElement("video");
+            video.src = src;
             document.body.append(video);
         } else {
 
