@@ -16,8 +16,9 @@ function button() {
         img.id = 'doggo_image';
         let pieces = src.split(".");
 
+        // Need to figure this part out
         if (pieces[pieces.length-1] === "mp4" || pieces[pieces.length-1] === "webM") {
-            let video = document.createElement("video")
+            let video = document.createElement("video");
             document.body.append(video);
         } else {
 
