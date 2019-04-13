@@ -7,13 +7,21 @@ const userAction = async () => {
 
 function button() {
     document.getElementById('btn').onclick = async function () {
-        const src = await userAction(),
-            img = document.createElement('img');
+        const src = await userAction();
+        const img = document.createElement('img');
         img.src = src;
         img.width = 500;
         img.height = 500;
         img.alt = "doggo";
         img.id = 'doggo_image';
+        let pieces = src.split(".");
+
+        if (pieces[pieces.length-1] === "mp4" || pieces[pieces.length-1] === "webM") {
+            let video = document.createElement("video")
+            document.body.append(video);
+        } else {
+
+        }
 
         const current_image = document.getElementById(img.id);
         if (current_image) {
