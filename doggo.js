@@ -11,8 +11,6 @@ function button() {
         let pieces = src.split(".");
         document.getElementById('media').innerHTML = "";
 
-
-
         if (pieces[pieces.length - 1] === "mp4" || pieces[pieces.length - 1] === "webM") {
             const video = document.createElement("video");
             video.src = src;
@@ -20,7 +18,6 @@ function button() {
             video.width = 500;
             video.height = 500;
             video.alt = "doggotoo";
-            video.id = "doggo_video";
             document.getElementById('media').appendChild(video);
         } else {
             const img = document.createElement('img');
