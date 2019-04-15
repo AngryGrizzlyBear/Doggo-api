@@ -29,4 +29,12 @@ function button() {
             document.getElementById('media').appendChild(img);
         }
     };
+    change()
+}
+
+function change() // no ';' here
+{
+    var elem = document.getElementById("btn");
+    if (elem.textContent==="Click Me!") elem.textContent = "Click Me!";
+    else elem.textContent = "Click Me Again!";
 }
