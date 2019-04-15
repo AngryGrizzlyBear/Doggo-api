@@ -17,6 +17,10 @@ function button() {
             const video = document.createElement("video");
             video.src = src;
             video.id = 'doggo_image';
+            video.width = 500;
+            video.height = 500;
+            video.alt = "doggotoo";
+            video.id = "doggo_video";
             document.getElementById('media').appendChild(video);
         } else {
             const img = document.createElement('img');
