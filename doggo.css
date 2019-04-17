@@ -1,9 +1,20 @@
 .paragraphs {
-     display: block;
-     margin-left: auto;
-     margin-right: auto;
-     width: 40%;
- }
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    font-family: lobster, serif;
+    text-align: center;
+}
+
+
+#center-style {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
 
 #btn {
     display: block;
@@ -11,8 +22,14 @@
     margin-right: auto;
 }
 
+h1 {
+    font-family: roboto, serif;
+}
+
 img, video {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
+
+
